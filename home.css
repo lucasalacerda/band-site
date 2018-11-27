@@ -1,0 +1,294 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+
+}
+
+/*------------------------------*\
+    Grid System
+\*------------------------------*/
+
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+
+.row,
+.column {
+  box-sizing: border-box;
+}
+
+.row:after {
+  clear: both;
+}
+
+.column + .column {
+    margin-left: 1.6%;
+  }
+
+.column {
+    position: relative;
+    float: left;
+  }
+
+.column-1 {
+    width: 6.86666666667%;
+  }
+  
+  .column-2 {
+    width: 15.3333333333%;
+  }
+  
+  .column-3 {
+    width: 23.8%;
+  }
+  
+  .column-4 {
+    width: 32.2666666667%;
+  }
+  
+  .column-5 {
+    width: 40.7333333333%;
+  }
+  
+  .column-6 {
+    width: 49.2%;
+  }
+  
+  .column-7 {
+    width: 57.6666666667%;
+  }
+  
+  .column-8 {
+    width: 66.1333333333%;
+  }
+  
+  .column-9 {
+    width: 74.6%;
+  }
+  
+  .column-10 {
+    width: 83.0666666667%;
+  }
+  
+  .column-11 {
+    width: 91.5333333333%;
+  }
+  
+  .column-12 {
+    width: 100%;
+  }
+
+/*------------------------------*\
+   End of Grid System
+\*------------------------------*/
+
+/*------------------------------*\
+   COMMONS
+\*------------------------------*/
+
+main {
+  background: blue;
+}
+
+h1 {
+  padding: 0px;
+  margin: 0px;
+  color: white;
+}
+
+p {
+  padding: 0px;
+  margin: 0px;
+  color: white;
+}
+
+/*------------------------------*\
+   END OF COMMONS
+\*------------------------------*/
+
+/*------------------------------*\
+    HEADER
+\*------------------------------*/
+header {
+}
+
+nav#nav-menu {
+    display: flex; 
+    justify-content: flex-end;    
+    height: 100px;
+    border: .1px solid;
+    background: black;
+}
+
+.nav-menu-list {
+    padding: 0px;
+    background: blue;
+    display: flex;    
+    justify-content: space-around;
+    align-items: center;
+    border: .1px solid;
+}
+
+.menu-list-item {
+    background: red;
+    padding: 10px;
+    border: .1px solid;
+}
+
+ul {
+    list-style: none;
+}
+
+li a {
+    padding: 10px;
+    background: white;
+    text-decoration: none;
+}
+
+/*------------------------------*\
+    END OF HEADER
+\*------------------------------*/
+
+/*------------------------------*\
+    PRINCIPAL-CONTENT
+\*------------------------------*/
+
+#home {
+  height: calc(100vh);
+  background: green;
+}
+
+/*------------------------------*\
+    END OF PRINCIPAL-CONTENT
+\*------------------------------*/
+
+
+/*------------------------------*\
+    QUEMSAO
+\*------------------------------*/
+
+#quemsao {
+  height: calc(100vh);
+  background: black;
+}
+
+/*------------------------------*\
+    END OF QUEMSAO
+\*------------------------------*/
+
+/*------------------------------*\
+    CONTACT
+\*------------------------------*/
+
+#contact {
+    height: calc(100vh);
+    background: purple;
+}
+
+#contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact-content h1 {
+  width: 100%;
+}
+
+#contact-content img {
+  width: 50%;
+  height: 50%;
+}
+
+#contact-content form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+#contact-content form label,
+input,
+textarea {
+  padding: 5px;
+  margin: 4px;
+  width: 50%;
+}
+
+/*------------------------------*\
+    END OF CONTACT
+\*------------------------------*/
+
+/*------------------------------*\
+    FOOTER
+\*------------------------------*/
+
+footer {
+  padding: 0px;
+  margin: 0px;
+  height: calc(20vh);
+  background: peru;
+  display: flex;
+  align-items: center;
+}
+
+#footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#footer-description {
+}
+
+#icones-redes-sociais {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#icones-redes-sociais li {
+  padding: 10px;
+  margin: 10px;
+}
+
+
+/*------------------------------*\
+    END OF FOOTER
+\*------------------------------*/
+
+
+
+/*------------------------------*\
+    Mobile only
+\*------------------------------*/
+
+  @media only screen and (max-width: 550px) {
+    .column-1,
+    .column-2,
+    .column-3,
+    .column-4,
+    .column-5,
+    .column-6,
+    .column-7,
+    .column-8,
+    .column-9,
+    .column-10,
+    .column-11,
+    .column-12 {
+      width: auto;
+      float: none;
+    }
+  
+    .column + .column {
+      margin-left: 0;
+    }
+  }
+
+/*------------------------------*\
+    End Mobile only
+\*------------------------------*/
