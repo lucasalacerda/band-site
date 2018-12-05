@@ -213,6 +213,7 @@ li a {
   background: url('./img/sabia-quemsao.jpg') no-repeat;
   background-size: cover;
   background-position: top;
+  background-attachment: fixed;
   height: calc(100vh - 70px);
   justify-content: flex-start;
   align-items: center;
@@ -273,6 +274,7 @@ li a {
 #contact {
     height: calc(100vh - 20vh);
     background: purple;
+    box-shadow: inset -385px 0 231px 10px;
 }
 
 #contact-content {
@@ -304,14 +306,16 @@ li a {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  width: 100%;
+
 }
 
 #contact-content form label,
 input,
 textarea {
+  width: 80%;
   padding: 5px;
   margin: 4px;
-  width: 400px;
   resize: none;
 }
 
@@ -319,7 +323,6 @@ textarea {
   background-color: #161616;
   border: none;
   margin: 4px;
-  width: 400px;
   color: white;
   transition: opacity ease .5s;
   opacity: 1;
@@ -364,6 +367,7 @@ footer {
   width: 100%;
   display: flex;
   justify-content: center;
+  padding: 0;
 }
 
 #icones-redes-sociais li {
