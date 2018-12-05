@@ -6,24 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="home.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <title>Sabia, quem são</title>
 </head>
 
-<body>
+<body onscroll="showContent()">
     <main>
+        <div id="button-top">
+            <a href="#home"><i class="fas fa-angle-up"></i></a>
+        </div>
         <header class="column column-12">
             <div id="sabiazin">
                 <a href=""></a>
             </div>
             <nav id="nav-menu" class="column column-12">
                 <ul class="nav-menu-list column column-4">
-                    <li class="menu-list-item"><a href="#principal-content">HOME</a></li>
                     <li class="menu-list-item"><a href="#quemsao-content">QUEM SÃO</a></li>
                     <li class="menu-list-item"><a href="#contact-content">CONTATO</a></li>
                 </ul>
             </nav>
-            <button id="go-top">^
-            </button>
         </header>
         <section id="home">
             <div id="principal-content" class="column column-12">
@@ -35,40 +37,79 @@
             </div>
         </section>
         <section id="quemsao">
-            <div id="quemsao-content" class="column column-12">
-                <div id="quemsao-description">
-                    <h1>quem sao</h1>
+            <div id="quemsao-content" class="section-content column column-12">
+                <div id="quemsao-description" class="column column-12">
+                    <div id="description-title" class="column column-4">
+                        <h1>quem sao</h1>
+                    </div>
+                    <div id="description-content" class="column column-8">
+                        <p>
+                            A Banda Améllian envolta na suavidade de sua composição e musicalidade nos convida, desde
+                            2012,
+                            à conviver com o
+                            verdadeiro e intenso sentimento das manifestações artísticas.Transitando pela poesia e pelo
+                            teatro, remontando à música
+                            advinda da cultura brasileira e à uma mistura de inspiração, do ser e reconhecer, no qual a
+                            música consegue agrupar e
+                            difundir.
+                        </p>
+                        <p>
+                            Seria um sentimento de erudito e popular, sendo um espetáculo traduzido em nota e
+                            harmonia elencado em vários
+                            instrumentos, atuação e uma leve voz, que tornam à todos uma constante troca, por ora
+                            bonito e
+                            intenso, envolto numa
+                            tímida cerne, que cresce e nos permite integrar.
+                        </p>
+                        <p>
+
+                            A primeira experiência sonora da Banda foi iniciada em 2014, com as gravações do primeiro
+                            álbum
+                            "Aos Nossos Olhos",
+                            desenvolvido de forma artesanal, a fim de declarar o momento de formação que vivenciavam,
+                            assim
+                            como propagar um
+                            desafio à eles e à nós.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
         <section id="contact">
-            <div id="contact-content" class="column column-12">
+            <div id="contact-content" class="section-content column column-12">
                 <h1>contato</h1>
-                <img class="column-6" src="" alt="sabiazin">
-                <form class="column-6" action="">
-                    <label for="nome">nome</label>
-                    <input type="text" name="nome">
-                    <label for="email">email</label>
-                    <input type="text" name="email">
-                    <label for="mensagem">mensagem</label>
-                    <textarea type="text" cols="38" rows="5" name="mensagem"></textarea>
-                    <input type="submit" value="Submit">
-                </form>
+                <div id="contact-content-body">
+                    <div class="column column-4" id="contact-bird-image">
+                        <img src="./img/birds/birds.png" alt="sabiazin">
+                    </div>
+                    <div class="column column-8" id="contact-form">
+                        <form action="">
+                            <label for="nome">nome</label>
+                            <input type="text" name="nome">
+                            <label for="email">email</label>
+                            <input type="text" name="email">
+                            <label for="mensagem">mensagem</label>
+                            <textarea type="text" cols="38" rows="5" name="mensagem"></textarea>
+                            <input id="send-button" type="submit" value="Send">
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
         <footer>
             <div id="footer-content" class="column column-12">
-                <p id="footer-description">
-                    Descrição do footer
-                </p>
+                <div id="footer-description">
+                    <img id="footer-logo" src="./img/logo_sabia_branco.png" alt="logo-footer">
+                </div>
                 <ul id="icones-redes-sociais">
-                    <li><a href="">facebook</a></li>
-                    <li><a href="">instagram</a></li>
-                    <li><a href="">youtube</a></li>
+                    <li><a href="https://facebook.com/sabiaquemsao"><i class="fab fa-facebook-f icones-redes-sociais"></i></a></li>
+                    <li><a href="https://www.instagram.com/sabiaquem/"><i class="fab fa-instagram icones-redes-sociais"></i></a></li>
+                    <li><a href="https://youtube.com/channel/sabiaquem"><i class="fab fa-youtube icones-redes-sociais"></i></a></li>
                 </ul>
             </div>
         </footer>
     </main>
+    <script src="./js/home.js"></script>
 </body>
 
 </html>

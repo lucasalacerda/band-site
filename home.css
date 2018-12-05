@@ -2,7 +2,7 @@ html, body {
     margin: 0px;
     padding: 0px;
     scroll-behavior: smooth;
-
+    overflow-x: hidden;
 }
 
 /*------------------------------*\
@@ -89,8 +89,38 @@ html, body {
    COMMONS
 \*------------------------------*/
 
-main {
-  background: blue;
+#button-top {
+  background-color: white;
+  display: flex;
+  height: 50px;  
+  width: 50px;
+  border: 2px;
+  color: #161616;
+  border-radius: 180px;
+  bottom: 20px;
+  right: 30px;
+  position: fixed;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+}
+
+#button-top a {
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 30px;
+  opacity: .5;
+  transition: opacity ease .5s;
+  color: #161616;
+}
+
+#button-top a:hover {
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 30px;
+  opacity: 1;
 }
 
 h1 {
@@ -103,6 +133,17 @@ p {
   padding: 0px;
   margin: 0px;
   color: white;
+}
+
+.hidden-section {
+  opacity: 0;
+} 
+.visible-section {
+  opacity: 1;  
+}
+
+.section-content {
+  padding: 4vh 4vw;
 }
 
 /*------------------------------*\
@@ -160,6 +201,7 @@ li a {
   position: absolute;
   background: blue;
   opacity: .3;
+  
   height: calc(100vh - 70px);
   background-image: linear-gradient(red, blue);
   filter: grayscale(10%);
@@ -178,6 +220,8 @@ li a {
 }
 
 #image-background img {
+  animation: logo-animation 1.5s;
+  position:relative;
   padding: 20px;
   margin: 20px;
   width: 400px;
@@ -194,8 +238,28 @@ li a {
 \*------------------------------*/
 
 #quemsao {
-  height: calc(100vh);
-  background: black;
+  height: calc(70vh);
+  background: #161616;
+}
+
+#quemsao-description {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#description-title {
+}
+
+#description-content {
+  position: relative;
+  opacity: 0;
+}
+
+#description-content p {
+  text-indent: 4em;
+  font-size: 14pt;
+  padding: 1vw;
+  text-align: justify;
 }
 
 /*------------------------------*\
@@ -207,7 +271,7 @@ li a {
 \*------------------------------*/
 
 #contact {
-    height: calc(100vh);
+    height: calc(100vh - 20vh);
     background: purple;
 }
 
@@ -218,16 +282,24 @@ li a {
   justify-content: center;
 }
 
+#contact-content-body {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
 #contact-content h1 {
   width: 100%;
 }
 
-#contact-content img {
-  width: 50%;
-  height: 50%;
+#contact-bird-image img {
+  position: relative;
+  opacity: 0;
+  width: 300px;
+  padding: 2vw;
 }
 
-#contact-content form {
+#contact-form form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -239,7 +311,25 @@ input,
 textarea {
   padding: 5px;
   margin: 4px;
-  width: 50%;
+  width: 400px;
+  resize: none;
+}
+
+#send-button {
+  background-color: #161616;
+  border: none;
+  margin: 4px;
+  width: 400px;
+  color: white;
+  transition: opacity ease .5s;
+  opacity: 1;
+}
+
+#send-button:hover {
+  opacity: .7;
+  cursor: pointer;
+
+  
 }
 
 /*------------------------------*\
@@ -251,12 +341,12 @@ textarea {
 \*------------------------------*/
 
 footer {
+  background-color: #161616;
   padding: 0px;
   margin: 0px;
   height: calc(20vh);
-  background: peru;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 
 #footer-content {
@@ -265,7 +355,9 @@ footer {
   justify-content: center;
 }
 
-#footer-description {
+#footer-logo {
+  width: 60px;
+  height: 60px;
 }
 
 #icones-redes-sociais {
@@ -275,16 +367,73 @@ footer {
 }
 
 #icones-redes-sociais li {
-  padding: 10px;
-  margin: 10px;
+  padding: 0 10px;
+  margin: 0 10px;
 }
 
+.icones-redes-sociais {
+  font-size: 20px;
+  transition: opacity ease .5s;
+  opacity: .6;
+
+}
+
+.icones-redes-sociais:hover {
+  opacity: 1;
+}
 
 /*------------------------------*\
     END OF FOOTER
 \*------------------------------*/
 
 
+
+/*------------------------------*\
+    KREYFRAMES
+\*------------------------------*/
+
+@keyframes logo-animation {
+  from { 
+    left: -400px; 
+    opacity: 0;
+  }
+  to { 
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes section-content-animation {
+  from {
+    right: -400px;
+    opacity: 0;
+  }
+
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+/*------------------------------*\
+    END OF KEYFRAMES
+\*------------------------------*/
+
+/*------------------------------*\
+    CLASSES FOR JS
+\*------------------------------*/
+
+.show-content {
+  animation: section-content-animation 2s ease both;
+}
+
+.show-img {
+  animation: logo-animation 2s ease both;
+}
+
+/*------------------------------*\
+    END OF CLASSES FOR JS
+\*------------------------------*/
 
 /*------------------------------*\
     Mobile only
