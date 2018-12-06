@@ -182,6 +182,7 @@ p {
 header {
   z-index: 1;
   font-family: 'Oswald';
+  position: absolute;
 }
 
 nav#nav-menu {
@@ -234,7 +235,7 @@ li a {
   position: absolute;
   background: blue;
   opacity: .3;
-  height: calc(100vh - 70px);
+  min-height: 100vh;
   background-size: cover;
   background-position: top;
   background-image: linear-gradient(red, blue);
@@ -248,7 +249,7 @@ li a {
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
-  height: calc(100vh - 70px);
+  min-height: 100vh;
   justify-content: flex-start;
   align-items: center;
 
@@ -273,7 +274,7 @@ li a {
 \*------------------------------*/
 
 #quemsao {
-  height: calc(70vh);
+  min-height: calc(70vh);  
   background: #161616;
 }
 
@@ -306,16 +307,15 @@ li a {
 \*------------------------------*/
 
 #contact {
-  height: calc(100vh - 20vh);
+  min-height: 30vh;  
   padding: 0;
   margin: 0;
 }
 
 #filter-contact {
   position: absolute;
-  /* background: blue; */
   opacity: .4;
-  height: calc(100vh - 20vh);
+  min-height: 100%;
   background-image: linear-gradient(blue, green );
 }
 
@@ -327,7 +327,7 @@ li a {
   filter: grayscale(100%) blur(2px);
   opacity: .6;
   background-size: cover;
-  height: calc(100vh - 20vh);
+  min-height: 100%;
   background-position: center;
   background-attachment: fixed;
   z-index: -1;
@@ -335,7 +335,7 @@ li a {
 }
 
 #contact-content {
-  height: calc(100vh - 20vh);
+  min-height: calc(100vh - 20vh);  
   display: flex;
   flex-wrap: wrap;
   align-items: center;

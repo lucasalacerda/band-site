@@ -9,7 +9,7 @@ function showContent() {
       quemsaoDescriptionContent.classList.add('show-content');
     } 
     
-    if (window.pageYOffset >= (contactSection.offsetHeight + 150)) {
+    if (window.pageYOffset >= (contactSection.offsetHeight + 250)) {
         console.log('do something');
         contactBirds.classList.add("show-img");
     }
