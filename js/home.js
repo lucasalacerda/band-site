@@ -10,7 +10,6 @@ function showContent() {
     } 
     
     if (window.pageYOffset >= (contactSection.offsetHeight + 250)) {
-        console.log('do something');
         contactBirds.classList.add("show-img");
     }
 }
