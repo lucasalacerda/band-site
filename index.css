@@ -375,7 +375,6 @@ input,
 textarea {
   width: 80%;
   padding: 5px;
-  margin: 4px;
   resize: none;
 }
 
@@ -384,7 +383,8 @@ textarea {
   background-color: #161616;
   border: none;
   width: 82%;
-  margin: 4px;
+  margin: 10px;
+  padding: 10px;
   color: white;
   transition: opacity ease .5s;
   opacity: 1;
@@ -520,7 +520,11 @@ footer {
       float: none;
     }
 
-   
+    #image-background img{
+      width: 300px;
+      height: 300px;
+      padding: 0;
+    }
   
     .column + .column {
       margin-left: 0;
